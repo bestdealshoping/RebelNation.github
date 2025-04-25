@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav_portfolio">Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .portfolio-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background-color: #fff;
+    }
+    .portfolio-item:hover {
+      transform: scale(1.05);
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.2);
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .portfolio-item h3 {
+      text-align: center;
+      margin: 0.5rem;
+    }
+    .portfolio-item button {
+      display: block;
+      margin: 0.5rem auto 1rem;
+      padding: 0.4rem 1rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .portfolio-item button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 data-i18n="nav_portfolio">Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+        <li><a href="temoignages.html" data-i18n="nav_testimonials">Témoignages</a></li>
+        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <select id="language-switcher">
+        <option value="fr">Français</option>
+        <option value="ht">Kreyòl</option>
+        <option value="en">English</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 data-i18n="portfolio_intro">Nos réalisations</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="images/project1.jpg" alt="Projet 1">
+          <h3>Carte d'invitation</h3>
+          <button onclick="alert('Plus de détails bientôt disponibles !')">Voir plus</button>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project2.jpg" alt="Projet 2">
+          <h3>Flyer événementiel</h3>
+          <button onclick="alert('Plus de détails bientôt disponibles !')">Voir plus</button>
+        </div>
+        <div class="portfolio-item">
+          <img src="images/project3.jpg" alt="Projet 3">
+          <h3>Logo branding</h3>
+          <button onclick="alert('Plus de détails bientôt disponibles !')">Voir plus</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact: +509 42006945 / 42824391 | Email: <a href="mailto:jeromjp35@gmail.com">jeromjp35@gmail.com</a></p>
+    <p>Adresse: <a href="https://www.google.com/maps/search/?api=1&query=Rue+du+Fort,+Fort+St+Michel,+Petite-Anse" target="_blank">rue du fort / fort St Michel / petite-anse</a></p>
+  </footer>
+
+  <script src="lang.js"></script>
+</body>
+</html>
